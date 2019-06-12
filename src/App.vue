@@ -1,12 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <v-app id="app">
+    <v-content id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </v-content>
     <router-view />
-  </div>
+  </v-app>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  name: "App"
+});
+</script>
 
 <style lang="scss">
 #app {
@@ -27,3 +34,4 @@
   }
 }
 </style>
+
